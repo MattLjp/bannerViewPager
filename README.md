@@ -701,7 +701,9 @@ class MainActivity : AppCompatActivity() {
 ```
 
 效果如下
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/5cf641d5036d4d348f8a649e93cc3c21.gif)
+
 除了上面的配置，还可以配置指示器的图片、间隔，图片间的间隔，展示多个视图，如下
 
 ```kotlin
@@ -734,7 +736,9 @@ class MainActivity : AppCompatActivity() {
 ```
 
 效果如下
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/aa230c1637dc46f1ae49daaa33bd3280.gif)
+
 如果要添加滚动动画可以继承ViewPager2.PageTransformer实现
 
 ```kotlin
@@ -789,6 +793,7 @@ class GalleryTransformer : ViewPager2.PageTransformer {
 ```
 
 效果如下
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/def7c990dd784c73983202d69f2c5df1.gif)
 
 目前功能只有这些，后续遇到新需求再慢慢完善。
