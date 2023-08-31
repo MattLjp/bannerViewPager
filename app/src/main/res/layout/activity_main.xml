@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.matt.bannerViewPager.banner.BannerViewPager
-        android:id="@+id/viewpager2"
+    <com.matt.bannerviewpager.banner.BannerViewPager
+        android:id="@+id/bannerViewpager"
         android:layout_width="match_parent"
         android:layout_height="400dp"
         app:layout_constraintBottom_toBottomOf="parent"

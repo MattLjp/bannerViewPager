@@ -1,4 +1,4 @@
-package com.matt.bannerViewPager.banner
+package com.matt.bannerviewpager.banner
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,15 +6,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 /**
- * @ Author : 廖健鹏
- * @ Date : 2021/7/27
- * @ e-mail : 329524627@qq.com
- * @ Description :[BannerViewPager] 轮播控件所需的 BaseAdapter
+ * Created by Liaojp on 2023/7/20
  */
 abstract class BaseBannerAdapter<T, VH : RecyclerView.ViewHolder> : RecyclerView.Adapter<VH>() {
-    protected var mList: MutableList<T> = mutableListOf()
+    private var mList: MutableList<T> = mutableListOf()
     var isCanLoop = false
-    var pageClickListener: OnPageClickListener? = null
+    var pageClickListener: OnPageClickListener<T>? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
         val inflate =
@@ -25,7 +22,7 @@ abstract class BaseBannerAdapter<T, VH : RecyclerView.ViewHolder> : RecyclerView
     override fun onBindViewHolder(holder: VH, position: Int) {
         val realPosition: Int = getRealPosition(position)
         holder.itemView.setOnClickListener {
-            pageClickListener?.onPageClick(realPosition)
+            pageClickListener?.onPageClick(realPosition, mList[realPosition])
         }
         onBind(holder, mList[realPosition], realPosition, mList.size)
     }
@@ -59,8 +56,8 @@ abstract class BaseBannerAdapter<T, VH : RecyclerView.ViewHolder> : RecyclerView
         return if (isCanLoop) (position + pageSize) % pageSize else position
     }
 
-    interface OnPageClickListener {
-        fun onPageClick(position: Int)
+    interface OnPageClickListener<T> {
+        fun onPageClick(position: Int, data: T)
     }
 
 

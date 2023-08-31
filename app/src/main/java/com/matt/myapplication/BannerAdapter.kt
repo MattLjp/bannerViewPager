@@ -1,17 +1,11 @@
-package com.matt.bannerViewPager
+package com.matt.myapplication
 
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
-import com.matt.bannerViewPager.banner.BaseBannerAdapter
+import com.matt.bannerviewpager.banner.BaseBannerAdapter
 
-/**
- * @ Author : 廖健鹏
- * @ Date : 2021/7/27
- * @ e-mail : 329524627@qq.com
- * @ Description :
- */
 class BannerAdapter : BaseBannerAdapter<Int, BannerAdapter.ViewHolder>() {
 
     override fun getLayoutId(viewType: Int) = R.layout.item_banner_samll

@@ -1,4 +1,4 @@
-package com.matt.bannerViewPager
+package com.matt.myapplication
 
 import org.junit.Test
 
