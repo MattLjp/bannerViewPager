@@ -3,4 +3,4 @@ before_install:
   - sdk use java 17.0.8-open
 
 jdk:
-  - openjdk11
+  - openjdk17
