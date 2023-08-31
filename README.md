@@ -1,23 +1,18 @@
-# 前言
+## 前言
 
 在开发中经常会遇到循环轮播图，之前的实现方式是在Activity中使用定时器控制轮播。后面想了想，看能不能把ViewPager2和定时器封装成自定义控件方便移植。然后就有了这个自定义控件。
 
-# 效果
+## 效果
 
 ![在这里插入图片描述](doc/img/20230831164415.gif)
 ![在这里插入图片描述](doc/img/20230831164831.gif)
 ![在这里插入图片描述](doc/img/20230831163354.gif)
-![在这里插入图片描述](doc/img/20230831163909.gif)
-![在这里插入图片描述](doc/img/20230831164944.gif)
-![在这里插入图片描述](doc/img/20230831165156.gif)
-![在这里插入图片描述](doc/img/20230831165449.gif)
-![在这里插入图片描述](doc/img/20230831165621.gif)
 
-# 如何使用
+## 如何使用
 
-##  gradle依赖
+###  gradle依赖
 Project 的 settings.gradle 添加仓库
-```kotlin
+```groovy
 dependencyResolutionManagement {
     repositories {
         // ...
@@ -33,7 +28,7 @@ dependencies {
 }
 ```
 
-## 基础用法
+### 基础用法
 **1. 在xml中添加控件**
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -136,8 +131,6 @@ class MainActivity : AppCompatActivity() {
     }
 }
 ```
-![在这里插入图片描述](doc/img/20230831164415.gif)
-
 在创建完成后，可以通过`refreshData()`方法，更新列表
 
 切换效果可以继承`ViewPager2.PageTransformer`自己实现，当前预设了几种效果
@@ -171,4 +164,19 @@ class MainActivity : AppCompatActivity() {
 ![在这里插入图片描述](doc/img/20230831165621.gif)
 
 
+## License
+```
+ Copyright 2018, jessyan
 
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+```
