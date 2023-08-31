@@ -24,7 +24,7 @@ dependencyResolutionManagement {
 Module 的 build.gradle 添加依赖框架
 ```groovy
 dependencies {
-    implementation 'com.github.MattLjp:bannerViewPager:1.0.2'
+    implementation 'com.github.MattLjp:bannerViewPager:1.0.3'
 }
 ```
 
