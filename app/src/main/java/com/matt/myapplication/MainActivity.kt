@@ -4,7 +4,14 @@ import android.content.res.Resources
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
+import com.matt.bannerviewpager.transformer.AlphaPageTransformer
+import com.matt.bannerviewpager.transformer.DepthPageTransformer
+import com.matt.bannerviewpager.transformer.MZScaleInTransformer
+import com.matt.bannerviewpager.transformer.RotateDownPageTransformer
+import com.matt.bannerviewpager.transformer.RotateUpPageTransformer
+import com.matt.bannerviewpager.transformer.RotateYTransformer
 import com.matt.bannerviewpager.transformer.ScaleTransformer
+import com.matt.bannerviewpager.transformer.ZoomOutPageTransformer
 import com.matt.myapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -22,8 +29,8 @@ class MainActivity : AppCompatActivity() {
             .setInterval(3000)
             .seScrollDuration(1000)
             .setPageMargin(dpToPx(15))
-            .setRevealWidth(dpToPx(25))
-            .addPageTransformer(ScaleTransformer())
+            .setRevealWidth(dpToPx(35))
+            .addPageTransformer(ZoomOutPageTransformer())
             .setIndicatorSliderColor(
                 R.drawable.dot_def,
                 R.drawable.dot_selected
@@ -32,11 +39,12 @@ class MainActivity : AppCompatActivity() {
             .setAdapter(adapter)
             .create(
                 listOf(
-                    R.mipmap.b,
-                    R.mipmap.c,
-                    R.mipmap.d,
-                    R.mipmap.e,
-                    R.mipmap.f
+                    R.drawable.a,
+                    R.drawable.b,
+                    R.drawable.c,
+                    R.drawable.d,
+                    R.drawable.e,
+                    R.drawable.f,
                 )
             )
     }
